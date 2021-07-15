@@ -27,17 +27,7 @@ public class Main {
 		
 		generateList();
 		now = System.currentTimeMillis();
-		
-		//sortList(2);
-		elapsed = (double)(System.currentTimeMillis() - now) / 1000.0;
-		System.out.println("Finished in " + elapsed + " seconds");
-		
-		generateList();
-		now = System.currentTimeMillis();
-		
 		quickSort2(sortedList, 0);
-		
-		//sortList(1);
 		elapsed = (double)(System.currentTimeMillis() - now) / 1000.0; 
 		System.out.println("Finished in " + elapsed + " seconds");
 		
@@ -52,14 +42,7 @@ public class Main {
 		
 	}
 	
-	public void sortList(int i) {
-		
-		if(i == 1) { bubbleSort(); }
-		if(i == 2) { quickSort(); }
-		//System.out.println(Arrays.toString(sortedList));
-		
-	}
-	
+	//Most efficient, easiest, cleanest
 	public void quickSort2(int[] aList, int offset) {
 		
 		int rp = aList.length - 2;
@@ -122,7 +105,6 @@ public class Main {
 				}
 				
 			}
-			//System.out.println("Swapped " + swapCounter + " pairs");
 			
 			if(swapCounter == 0) {
 				sorted = true;
